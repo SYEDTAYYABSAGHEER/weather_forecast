@@ -1,4 +1,4 @@
-name: "Cronjob"
+name: "Weather Updater"
 on:
   schedule:
     - cron: "*/1 * * * *"
