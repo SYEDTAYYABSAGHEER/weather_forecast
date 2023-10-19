@@ -1,0 +1,13 @@
+name: Simple Cron Job
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  simple-cron-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello World
+        run: echo "Hello, World! This is a simple cron job."
