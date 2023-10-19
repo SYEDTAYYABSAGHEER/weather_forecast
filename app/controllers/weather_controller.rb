@@ -1,5 +1,6 @@
 class WeatherController < ApplicationController
-  def update
+ 
+    def update
     weather_api =  Rails.application.credentials.weather_api[:api_key]
     city = Rails.application.credentials.weather_api[:city]
     forecast_service = WeatherForecastService.new(weather_api, city)
@@ -8,4 +9,6 @@ class WeatherController < ApplicationController
     File.write(Rails.root.join('README.md'), erb)
     redirect_to root_path, notice: 'Weather forecast updated!'
   end
+
+  def index;  end
 end

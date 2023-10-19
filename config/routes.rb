@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     get '/update_weather', to: 'weather#update'
 
 
+
+
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "weather#index"
 end
