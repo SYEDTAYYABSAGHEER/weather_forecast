@@ -10,8 +10,8 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v3
-      - name: Update Weather
-        uses: SYEDTAYYABSAGHEER/weather_forecast@v1.0.5
+      - name: Generate README
+        uses: huantt/weather-forecast@v1.0.5
         with:
           city: Lahore
           days: 7
