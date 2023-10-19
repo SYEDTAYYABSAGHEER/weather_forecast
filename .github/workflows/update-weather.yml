@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/h@v3
-      - name: Generate README
-        uses: syedtayyabsagheer/weather-forecast@v1.0.5
+      - name: Update Weather
+        uses: huantt/weather-forecast@v1.0.5
         with:
           city: Lahore
           days: 7
