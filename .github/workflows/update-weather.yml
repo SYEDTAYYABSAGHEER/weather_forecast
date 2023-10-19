@@ -1,14 +1,14 @@
 name: "Cronjob"
 on:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "1 * * * *"
 
 jobs:
   update-weather:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/h@v3
       - name: Generate README
         uses: huantt/weather-forecast@v1.0.5
         with:
