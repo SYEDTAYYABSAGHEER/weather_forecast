@@ -1,12 +1,21 @@
 <!-- README.md.erb -->
-
-# My GitHub Profile
-
-The current weather in my city is:
-
-<%= @weather["location"]["name"] %>°C
-
-Feel free to check out my projects below!
+## About Me
+Ruby on Rails | React JS | Heroku | AWS | Digital Ocean | PHP | Python Scripting 
 
 
-[![Update Weather](https://img.shields.io/badge/Update%20Weather-Click%20Here-brightgreen)](https://your-app-url/update_weather)
+## Current Location
+City: <%= @weather["location"]["name"] %>
+State: <%= @weather["location"]["region"] %>
+Country: <%= @weather["location"]["country"] %>
+Local Time: <%= @weather["location"]["localtime"] %>
+TimeZone: <%= @weather["location"]["tz_id"] %>
+
+## Weather Condition in <%= @weather["location"]["country"] %>
+
+Temperature in  Celsius: <%= @weather["current"]["temp_c"] %> °C
+Temperature in  Fahrenheit: <%= @weather["current"]["temp_c"] %> °F
+Condition in <%= @weather["location"]["country"] %>
+
+<%= @weather %>
+<%= @weather["condition"] %> 
+<%= @weather["condition"] %> 
