@@ -1,0 +1,15 @@
+name: Run Specific Task
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Request to Route
+        run: |
+          curl -X GET https://your-app-url.com/run_specific_task
