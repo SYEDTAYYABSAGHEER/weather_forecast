@@ -9,24 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - uses: actions/checkout@v3
-      - name: Generate README
-        uses: SYEDTAYYABSAGHEER/weather_forecast@main
-        with:
-          city: Lahore
-          days: 7
-          weather-api-key: ${{ secrets.WEATHER_API_KEY }}
-          template-file: "README.md.erb"
-          out-file: "README.md"
-      - name: Commit
-        run: |
-          if git diff --exit-code; then
-            echo "No changes to commit."
-            exit 0
-          else
-            git config user.name github-actions
-            git config user.email github-actions@github.com
-            git add .
-            git commit -m "update"
-            git push origin main
-          fi
+      - name: Kill the Server
+      - run: pkill -9 -f puma
+      - name: Bundle Update
+      - run: bundle install
+      - name: Run Rails Server
+      - run: rails s
