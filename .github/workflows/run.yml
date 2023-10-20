@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Generate README
-        uses: SYEDTAYYABSAGHEER/weather_forecast@master
+        uses: SYEDTAYYABSAGHEER/weather_forecast@main
         with:
           city: Lahore
           days: 7
